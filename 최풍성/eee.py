@@ -1,1 +1,1 @@
-print(int('a37c',15))
+print(1)
