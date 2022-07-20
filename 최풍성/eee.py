@@ -10,3 +10,4 @@ for i in range(n):
         else:
             arr.append(ord(y[j])-ord(x[j])+26)
     print("Distances: "+" ".join(map(str,arr)))
+    print(1)
