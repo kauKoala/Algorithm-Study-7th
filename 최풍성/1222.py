@@ -6,7 +6,9 @@ for i in range(n):
 ans=[0]*(n-7)*(m-7)
 for i in range(n-7):
     for j in range(m-7):
-        test=arr[i:8+i][j:8+j]
+        test = []
+        for k in range(8):
+            test.append(arr[i+k][j:8+j])
         if test[0][0]=="B":
            for k in range(8):
             if k%2==0:
