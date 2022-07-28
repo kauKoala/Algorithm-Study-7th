@@ -1,0 +1,33 @@
+i=0
+while i<3:
+    a,b,c,d=map(int,input().split())
+
+
+cnt=0
+
+list=[]
+list.append(a)
+list.append(b)
+list.append(c)
+list.append(d)
+p=0
+while p<3:
+    if 1 ==list[p]:
+        cnt+=1
+
+        if cnt==0:
+            print("D")
+    
+        if cnt==1:
+            print("C")
+   
+        if cnt==2:
+            print("B")
+   
+        if cnt==3:
+            print("A")
+
+        p+=1
+i+=1
+
+
