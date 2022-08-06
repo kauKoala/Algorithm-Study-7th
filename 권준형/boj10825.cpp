@@ -19,7 +19,7 @@ int main()
         cin >> names[i] >> arr[i][1] >> arr[i][2] >> arr[i][3];
     }
 
-    sort(arr.begin(), arr.end(), [names] (vector<int>& v1, vector<int>& v2) -> bool {
+    sort(arr.begin(), arr.end(), [&names] (vector<int>& v1, vector<int>& v2) -> bool {
     if (v1[1] == v2[1])
     {
         if (v1[2] == v2[2])
