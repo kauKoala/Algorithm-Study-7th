@@ -11,24 +11,19 @@ int main()
 
     int n, k; cin >> n >> k;
     int pi; 
-    vector<long double> v;
+    vector<long> v;
     for (int j = 0; j < n; j++)
     {
         cin >> pi;
-        vector<long double> tri;
+        long res = 0;
         for (int i = 0; i < pi; i++)
         {
             int x, y;
             cin >> x >> y;
-            long double res = sqrtl(x*x + y*y);
-            tri.push_back(res);
+            res = max(long( x*x + y*y ), res);
         }
-        v.push_back(*max_element(tri.begin(), tri.end()));
+        v.push_back(res);
     }
-    sort(v.begin(), v.end(), less<long double>());
-    long double dist = v[k-1];
-    long double res = dist * dist;
-    cout << fixed;
-    cout.precision(2);
-    cout << res;
+    sort(v.begin(), v.end(), less<long>());
+    cout << v[k-1] << ".00";
 }
